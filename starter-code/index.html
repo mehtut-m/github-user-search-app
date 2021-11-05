@@ -5,24 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | GitHub user search app</title>
-</head>
+
+  <script src="./script.js"></script>
+  </head>
 <body>
+  <main>
+    <section class="content">
+      
+      <div class="app-header-container">
+        <h1>devfinder</h1>
+        <div class="theme-container">
+          <p>Light</p>
+          <object data="./assets/icon-sun.svg"></object>
+        </div>
+      </div>
 
-  devfinder
+      <!-- Search form Section -->
+      <form action="">
+        <img src="./assets/icon-search.svg" alt="">
+        <input type="text" placeholder="Search GitHub username...">
+        <span class="error-message"></span>
+        <input type="submit" value="Search">
+      </form>
+      <!-- Result Card Display -->
+      <div class="card-container">
 
-  Light
-  Dark
+        <div class="profile-container">
+          <img src="" alt="avatar" class="profile-image">
+          <div class="profile-info">
+            <h2 class="profile-title">The Octocat</h2>
+            <a href="#" class="github-link">@octocat</a>
+            <p class="join-on">Joined 25 March 2011</p>
+          </div>
+        </div>
 
-  Search GitHub username...
-  Search
+        <p class="bio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        
+        <div class="repository-status">
+          <div class="repos">
+            <h3>Repos</h3>
+            <p class="repo-count">8</p>
+          </div>
+          <div class="followers">
+            <h3>Followers</h3>
+            <p class="follower-count">3938</p>
+          </div>
+          <div class="following">
+            <h3>Following</h3>
+            <p class="following-count">9</p>
+          </div>
+        </div>
 
-  Joined
-
-  Repos
-  Followers
-  Following
-
+        <div class="contact-container">
+          <div class="address-container contact-item">
+            <object data="./assets/icon-location.svg"></object>
+            <span class="contact-description">San francisco</span>
+          </div>
+          <div class="website-container contact-item">
+            <object data="./assets/icon-website.svg"></object>
+            <a href="" class="contact-description">San francisco</a>
+          </div>
+          <div class="twitter-container contact-item">
+            <object data="./assets/icon-twitter.svg"></object>
+            <span class="contact-description">San francisco</span>
+          </div>
+          <div class="company-container contact-item">
+            <object data="./assets/icon-company.svg"></object>
+            <span class="contact-description">San francisco</span>
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
 </body>
 </html>
