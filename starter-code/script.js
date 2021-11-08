@@ -123,16 +123,23 @@ function updateLink(targetElement, value) {
  function switchTheme() {
     let currentTheme = toggleSwitch.querySelector('p');
     let iconSwitch = toggleSwitch.querySelector('object');
-    console.log(iconSwitch);
+    let iconImg = document.querySelector('.theme-icon');
+    
+    
     if(currentTheme.textContent == 'Dark') {
         currentTheme.textContent = 'Light';
-        // iconSwitch.data = 'assets/icon-sun';
-         document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        iconImg.style.content = 'url(assets/icon-sun.svg)';
+        console.log(document.querySelector('.theme-icon'))
      }
      else {
          currentTheme.textContent = 'Dark';
-        //  iconSwitch.data = 'assets/icon-moon';
          document.documentElement.setAttribute('data-theme', 'light');
+         iconImg.style.content = 'url(assets/icon-moon.svg)';
+         console.log(document.querySelector('.theme-icon'))
+
+
+        //  iconSwitch.data = 'assets/icon-moon.svg';
      }
  }
 })

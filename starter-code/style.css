@@ -8,7 +8,7 @@
     --empty-info-color: "";
     --link-color: #0079FF;
     --secondary-color: #90A4D4;
-
+    --box-shadow: unset;
 }
 /* *** Set variable for theme light *** */
 [data-theme="light"] {
@@ -20,6 +20,7 @@
     --empty-info-color: "";
     --link-color: #0079FF;
     --secondary-color: #90A4D4;
+    --box-shadow: 0 1rem 40px rgb(70 96 187 / 20%);
 }
 
 /* HTML Reset */
@@ -30,6 +31,9 @@
     font-family: 'Space Mono', monospace;
 }
 
+path {
+    fill: red !important;
+}
 body {
     background-color: var(--main-dark-color);
     color: var(--main-typography-color);
@@ -66,7 +70,6 @@ a {
     color: var(--secondary-color);
     cursor: pointer;
 }
-
 /* Form Search Section */
 form {
     display: flex;
@@ -109,6 +112,10 @@ input[type=submit]:hover {
 }
 
 /* Result Display Card */
+.card-container, .search-form {
+    box-shadow: var(--box-shadow);
+}
+
 .card-container {
     display: grid;
     gap: 1.5rem;
@@ -174,6 +181,9 @@ input[type=submit]:hover {
 }
 .not-found > :nth-child(2){
     color: var(--secondary-color);
+}
+.not-found > svg {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(320deg) brightness(101%) contrast(101%);
 }
 
 @media screen and (min-width:768px) {
